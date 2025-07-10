@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    <div class="nav-left">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Default-avatar.jpg/600px-Default-avatar.jpg" alt="logo" class="logo" />
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">My Project</a>
+      </nav>
+    </div>
+    <a href="#" class="contact-header">Contact Me</a>
+  </header>
+
+  <main class="form-container">
+    <h1>GET IN TOUCH</h1>
+    
+    <form action="/submit" method="post" enctype="multipart/form-data">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required/>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required/>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter your phone number" required/>
+
+      <label for="subject">Subject</label>
+      <select id="subject" required>
+        <option value="" >Select Subject</option>
+        <option value="feedback">Feedback</option>
+        <option value="inquiry">Inquiry</option>
+        <option value="support">Support</option>
+      </select>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">submit</button>
+    </form>
+  </main>
+</body>
+</html>
