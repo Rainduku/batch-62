@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Detail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="left">
+        <img src="https://dummyimage.com/50x30/000/fff&text=DU" alt="logo" style="height: 40px;"/>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">My Project</a>
+        </nav>
+    </div>
+    <button class="contact-btn">Contact Me</button>
+  </header>
+
+
+  <div class="container detail-container">
+    <h2 id="detailTitle">Project Title</h2>
+
+    <div class="detail-content">
+      <img id="detailImage" src="" alt="Project Image" class="detail-img"/>
+      
+      <div class="detail-info">
+        <h4>Duration</h4>
+        <p><span id="detailDate"></span></p>
+        <p><span id="detailDuration"></span></p>
+
+        <h4>Technologies</h4>
+        <div id="detailTechnologies" class="icons"></div>
+      </div>
+    </div>
+
+    <p id="detailDesc" class="detail-desc"></p>
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem('projectDetail'));
+    if (data) {
+      document.getElementById('detailTitle').innerText = data.title;
+      document.getElementById('detailImage').src = data.image;
+      document.getElementById('detailDate').innerText = data.dateRange;
+      document.getElementById('detailDuration').innerText = data.duration;
+      document.getElementById('detailDesc').innerText = data.description;
+      document.getElementById('detailTechnologies').innerHTML = data.technologies.map(t => `<span>${t}</span>`).join(' ');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* css bagian header */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* jarak antara logo dan nav */
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+.contact-btn {
+  background-color: #0c1421;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+h2 {
+    padding-top: calc(8px * 5);
+    padding-bottom: calc(8px * 2);
+    width: 100%;
+    text-align: center;
+}
+
+.addProject,
+.editProject {
+    height: 110vh;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.twoColumnField {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.rowFormField {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    margin-bottom: calc(8px * 1);
+}
+
+label {
+    font-weight: bold;
+    padding-top: calc(8px * 2);
+    padding-bottom: calc(8px * 1);
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+    height: 4ch;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.rowFormField>label {
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+    /* hanya bisa diubah tinggi (atas-bawah) */
+    overflow-x: hidden;
+    /* sembunyikan scroll horizontal jika ada */
+    height: 150px;
+}
+
+.formField>button {
+    background-color: #1a1a1a;
+    border-radius: 100px;
+    width: 100px;
+    padding: 4px;
+    border: none;
+    color: #fff;
+    margin-top: calc(8px * 5);
+    align-self: flex-end;
+}
+
+/* my project */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    padding-bottom: calc(8px * 3);
+}
+
+.card {
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardImage {
+    border-radius: 4px;
+
+    width: 200px;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 8px;
+}
+
+.cardTitle {
+    width: 200px;
+    margin: 0 8px;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.cardDuration,
+.cardDesc {
+    font-size: .5rem;
+    margin: 0 8px 8px;
+    width: 200px;
+}
+
+.cardButton {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+
+.cardButton>button {
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    width: 95px;
+    padding: 4px;
+    border: none;
+    color: #fff;
+}
+
+.cardIcon {
+    width: 200px;
+    display: flex;
+    gap: .5rem;
+    margin: 8px 0;
+}
+
+.icon {
+    height: 25px;
+}
+
+.backLayerEdit {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formEdit {
+    width: 500px;
+    height: 90vh;
+    background-color: white;
+    border-radius: 8px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.closeEdit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    background-image: url(https://img.icons8.com/?size=100&id=46&format=png&color=000000);
+    background-size: cover;
+    align-self: flex-end;
+}
+
+button#edit {
+    margin-bottom: calc(8px * 3);
+}
+
+.show {
+    display: flex;
+    z-index: 999;
+}
+
+.hide {
+    display: none;
+    z-index: -999;
+}
+
+.myProject {
+    background-color: white;
+    padding: 1rem;
+}
+
+.thumbnailEdit {
+    display: flex;
+}
+
+.thumbnailEditImage {
+    width: calc(50px * 2);
+    height: 50px;
+    margin: 5px;
+    border-radius: 4px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.removeThumbnailEdit {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 1;
+    right: 30px;
+    background-image: url(https://img.icons8.com/?size=100&id=102550&format=png&color=000000);
+    margin: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.detail-container {
+  background-color: #dbe1e7;
+  padding: 40px;
+}
+.detail-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.detail-img {
+  width: 45%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.detail-info {
+  flex: 1;
+}
+.detail-desc {
+  margin-top: 30px;
+  line-height: 1.6;
+  text-align: justify;
+}

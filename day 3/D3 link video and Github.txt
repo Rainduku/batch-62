@@ -1,0 +1,5 @@
+link video
+https://youtu.be/XuFszQA22Vo
+
+link GitHub
+https://github.com/Rainduku/batch-62/tree/master/day%203
